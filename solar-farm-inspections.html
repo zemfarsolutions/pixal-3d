@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-lt-installed="true">
+
+<head>
+
+   <meta charset="utf-8" />
+   <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+   <!-- Viewport Meta -->
+   <meta content="IE=edge" http-equiv="X-UA-Compatible">
+   <meta name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+   <meta content="Probdone"
+      name="Abdul Haseeb Q. a.k.a twistyBRAT 鬼 ];) | a.haseeb199@gmail.com | https://probdone.com">
+
+   <!-- Fav Icon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+
+   <title>Solar Farm Inspection - Pixal 3D</title>
+
+   <!-- Assets -->
+   <style>
+      @import "https://fonts.googleapis.com/css?family=Inter:500,700,600|Rubik:500";
+   </style>
+
+   <!-- Bootstrap 5 CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <link href="assets/css/style.css" rel="stylesheet" />
+   <link href="assets/css/mouse.css" rel="stylesheet" />
+   <link href="assets/css/form.css" rel="stylesheet" />
+
+</head>
+
+<body>
+   <div class="header">
+      <div class="container mobile">
+         <div class="logo">
+            <span class="logo_text">PIXAL</span>
+            <img src="assets/images/logo.png" />
+         </div>
+         <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+         </div>
+
+         <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+               <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#solutions">Solutions</a></li>
+                  <li><a href="#about">About Us</a></li>
+                  <li><span class="contact-us">Contact Us</span></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div class="container tablet">
+         <div class="logo">
+            <span class="logo_text">PIXAL</span>
+            <img src="assets/images/logo.png" />
+         </div>
+
+         <nav class="desktop-menu">
+            <ul>
+               <li class="menu-item">
+                  <a href="#home" class="active">Home</a>
+               </li>
+               <li class="menu-item">
+                  <a href="#solutions">Solutions</a>
+               </li>
+               <li class="menu-item">
+                  <a href="#about">About Us</a>
+               </li>
+               <li class="menu-item">
+                  <span class="contact-us">Contact Us</span>
+               </li>
+            </ul>
+         </nav>
+      </div>
+   </div>
+
+   <div id="form-overlay"></div>
+
+   <!--Contact Form Modal Start-->
+   <div class="scrollable no-display">
+      <div class="contact-container" id="contact-form-container">
+         <div class="left-col">
+            <div class="drone"></div>
+         </div>
+         <div class="right-col">
+            <h1>Book a flight</h1>
+            <p>
+               Planning to book a flight? Please fill the form below so we could
+               contact you at earliest convenience.
+            </p>
+
+            <!-- Make sure you don't change the form action-->
+            <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+               <!-- Replace with accesKey sent to your email -->
+               <input type="hidden" name="accessKey" value="e9644474-dd29-4b15-9735-7f5d747280d0" />
+               <!-- Required -->
+               <input type="hidden" name="subject" value="Test from Drone website" />
+               <label for="name">Name</label>
+               <input type="text" name="name" placeholder="Your Name" required />
+               <label for="$location">Location</label>
+               <input type="text" id="location" name="$location" placeholder="Your Address" required />
+               <label for="email">Email Address</label>
+               <input type="email" name="email" placeholder="Your Email Address" required />
+               <label for="phone">Phone</label>
+               <input type="phone" name="phone" placeholder="Your phone" />
+
+               <label for="$industry">Select your Industry</label>
+               <select placeholder="-" name="$industry" id="industry" required>
+                  <option disabled hidden selected>-</option>
+                  <option>Construction/Engineering</option>
+                  <option>Real Estate</option>
+                  <option>Insurance</option>
+                  <option>Energy</option>
+                  <option>Telecommunications</option>
+               </select>
+               <label id="industry-selection-label" for="$industry-field">Select your business field</label>
+               <select placeholder="-" name="$industry-field" id="industry-selection-select" required></select>
+               <label for="message">Message</label>
+               <textarea rows="6"
+                  placeholder="To best assist you with a quote. Please briefly describe your project and what you are looking to achieve. "
+                  id="message" name="message" required></textarea>
+               <!-- If we receive data in this field submission will be ignored -->
+               <input type="text" name="honeypot" style="display: none" />
+               <!-- Optional -->
+               <!-- If you want form to redirect to a specific url after submission -->
+               <input type="hidden" name="redirectTo" value="https://drone-8rh7.onrender.com/" />
+               <!-- Optional -->
+               <!--<a href="javascript:void(0)">--><button type="submit" id="submit" name="submit" class="round">
+                  Send</button><!--</a>-->
+            </form>
+
+            <div id="error"></div>
+            <div id="success-msg"></div>
+         </div>
+      </div>
+   </div>
+   <!--Contact Form Modal End-->
+
+   <div class="hero" id="home">
+      <div class="dots1"></div>
+      <div class="container">
+         <h3>
+            Bring Drone Technology to your Workflow
+         </h3>
+         <h1>Drone Solutions for your Industry Needs</h1>
+         <h5>We go to great heights to ensure our clients our happy.</h5>
+         <button class="button_header">
+            <img class="round_arrow" src="assets/images/button-round.svg" />
+            Serving: Alberta | British Columbia | Saskatchewan
+         </button>
+         <div class="drone-placeholder"></div>
+      </div>
+   </div>
+
+   <div class="container center">
+      <div id="mouse-scroll">
+         <div class="mouse">
+            <div class="mouse-in"></div>
+         </div>
+         <div>
+            <span class="down-arrow-1"></span>
+            <span class="down-arrow-2"></span>
+            <span class="down-arrow-3"></span>
+         </div>
+      </div>
+   </div>
+
+   <div class="content">
+      <section id="first_cta" class="cta_container">
+         <div class="full_width">
+            <div class="cta">
+               <div class="canada">
+                  <img src="assets/images/canada-flag.png" class="inline" />
+                  <div class="inline">
+                     <span class="h_20px">Certified Pilots</span>
+                     <span class="h_14px">Transport Canada</span>
+                  </div>
+               </div>
+               <div class="v_divider"></div>
+               <div class="text">
+                  <span class="h_20px">Ready to Fly your next mission?</span>
+               </div>
+               <div>
+                  <button class="round">Book a flight</button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="camera">
+         <div class="left_half">
+            <img src="assets/images/zenmeuse-camera.png" />
+         </div>
+         <div class="right_half">
+            <div class="inline">
+               <span class="h_16px">Serving Professionals Across Industries</span>
+               <h2>Our Industries</h2>
+               <div class="feature">
+                  <div class="feature_img">
+                     <img src="assets/images/engineering.svg" />
+                  </div>
+                  <div class="feature_text">
+                     <h4>Engineering and Construction</h4>
+                     <p class="feature_desc">
+                        Whether its surface modelling to get insights on the drainage
+                        behaviour, or volume reports for earthworks - there are
+                        numerous opportunities for more efficient work flow by
+                        utilizing drones.
+                     </p>
+                  </div>
+               </div>
+               <div class="feature">
+                  <div class="feature_img"><img src="assets/images/energy.svg" /></div>
+                  <div class="feature_text">
+                     <h4>Energy and Telco</h4>
+                     <p class="feature_desc">
+                        Detailed inspection of solar assets, wind turbines, natural
+                        gas plants, electrical power lines as well as
+                        telecommunication lines.
+                     </p>
+                  </div>
+               </div>
+               <div class="feature">
+                  <div class="feature_img"><img src="assets/images/estate.svg" /></div>
+                  <div class="feature_text">
+                     <h4>Real Estate</h4>
+                     <p class="feature_desc">
+                        Breath taking Ultra HD photography and videography for your
+                        next real estate project
+                     </p>
+                  </div>
+               </div>
+
+               <div class="feature">
+                  <div class="feature_img"><img src="assets/images/insurance.svg" /></div>
+                  <div class="feature_text">
+                     <h4>Insurance</h4>
+                     <p class="feature_desc">
+                        General inspections and claims related assessments could both
+                        benefit from the comprehensive and birds eye view that only a
+                        drone can provide
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="left_half_right">
+            <img src="assets/images/zenmeuse-camera--background--2.png" />
+         </div>
+      </section>
+
+      <section id="solutions" class="solutions">
+         <div class="dots1"></div>
+         <div class="container">
+            <h2 class="centered ">Industry <span class="gradient__text__1">Solutions</span></h2>
+            <div class="row_custom">
+               <div class="left">
+                  <div class="inline">
+                     <span class="h_16px mobile">Digital Terrain modelling</span>
+                     <h2 class="mobile">Construction and Engineering</h2>
+                     <div id="animate_terrain">
+                        <img src="assets/images/DIGITAL TERRAIN MODEL L1.png" class="first_img" />
+                        <img src="assets/images/DIGITAL TERRAIN MODEL L2.png" class="second_img" />
+                        <img src="assets/images/DIGITAL TERRAIN MODEL L3.png" class="third_img" />
+                     </div>
+                  </div>
+               </div>
+               <div class="right">
+                  <div class="inline">
+                     <span class="h_16px tablet">Digital Terrain modelling</span>
+                     <h2 class="tablet">Construction and Engineering</h2>
+                     <p class="solutions--content">
+                        Our construction clients see tremendous value in tracking and quantifying volumetric quantities
+                        of earth moved. Rather than rely on self-reported figures by contractors, drone surveying
+                        provides non-bias and accurate measurements.
+                     </p>
+                     <button class="round">Learn More</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="solutions circle_grad">
+         <div></div>
+         <div class="container">
+            <div class="row_custom">
+               <div class="left">
+                  <div class="inline">
+                     <span class="h_16px tablet">Aerial Thermal Imaging</span>
+                     <h2 class="tablet">Solar Farm Inspections</h2>
+                     <p class="solutions--content">
+                        A complete digital twin of your solar asset is produced and hosted online for you to share with
+                        stake holders. Detected anomalies can be viewed at the cell level. By integrating the serial
+                        numbers into your digital twin we can produce the reports necessary to streamline your warranty
+                        process for under performing modules.
+                     </p>
+                     <button class="round">Learn More</button>
+                  </div>
+               </div>
+               <div class="right">
+                  <div class="inline">
+                     <span class="h_16px mobile">Aerial Thermal Imaging</span>
+                     <h2 class="mobile">Solar Farm Inspections</h2>
+                     <img src="assets/images/solar-panel.png" />
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div></div>
+      </section>
+
+      <section class="solutions">
+         <div></div>
+         <div class="container">
+            <div class="row_custom">
+               <div class="left">
+                  <div class="inline">
+                     <span class="h_16px mobile">Insurance</span>
+                     <h2 class="mobile">Insurance</h2>
+                     <img src="assets/images/terrain.png" />
+                  </div>
+               </div>
+               <div class="right">
+                  <div class="inline">
+                     <span class="h_16px tablet">Insurance</span>
+                     <h2 class="tablet">Insurance</h2>
+                     <p class="solutions--content">
+                        Lorem ipsum dolor sit amet consectetur. Tincidunt ornare elementum aliquam tincidunt imperdiet.
+                        Convallis sodales erat in scelerisque felis sed
+                     </p>
+                     <button class="round">Learn More</button>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div></div>
+      </section>
+
+      <section class="solutions dots3">
+         <div></div>
+         <div class="container">
+            <div class="row_custom">
+               <div class="left">
+                  <div class="inline">
+                     <span class="h_16px tablet">Real Estate</span>
+                     <h2 class="tablet">Real Estate</h2>
+                     <p class="solutions--content">
+                        Professional videography and photography to bring attention to your property. Post processed and
+                        edited videos ready for your next social media campaign.
+                     </p>
+                     <button class="round">Learn More</button>
+
+                  </div>
+               </div>
+               <div class="right">
+                  <div class="inline">
+                     <span class="h_16px mobile">Capture Your Best Angle</span>
+                     <h2 class="mobile">Real Estate</h2>
+                     <img src="assets/images/buildings.png" />
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div></div>
+      </section>
+
+      <section id="about">
+         <div class="container">
+            <h2 class="centered">
+               Our <span class="red_text">Achievements</span>
+            </h2>
+            <div class="achievements">
+               <div class="ach">
+                  <div class="inline">
+                     <span class="h_16px">Acres Flows</span>
+                     <h1>
+                        <span class="counter" data-max="12500"></span>+
+                        <span class="h1_small">Acres</span>
+                     </h1>
+                     <p>Total Acres flown. That’s over 9400 football fields!</p>
+                  </div>
+               </div>
+               <div class="ach">
+                  <div class="inline">
+                     <span class="h_16px">Satisfied</span>
+                     <h1>
+                        <span class="counter" data-max="512"></span>+
+                        <span class="h1_small">Clients</span>
+                     </h1>
+                     <p>Lorem ipsum dolor sit amet consectetur. Et lectus venenatis nulla vitae viverra elementum
+                        dictumst et sit.</p>
+                  </div>
+               </div>
+               <div class="ach">
+                  <div class="inline">
+                     <span class="h_16px">Insurance Coverage</span>
+                     <h1>
+                        <span class="counter" data-max="5000000"></span>
+                        <span class="h1_small">CAD</span>
+                     </h1>
+                     <p>
+                        Five Million in Liability coverage for your piece of mind. Although you’ll sleep easier knowing
+                        that our pilots have NEVER had to make a claim.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section>
+         <div class="full_width">
+            <div class="cta">
+               <div class="canada">
+                  <img src="assets/images/canada-flag.png" class="inline" />
+                  <div class="inline">
+                     <span class="h_20px">Certified Pilots</span>
+                     <span class="h_14px">Transport Canada</span>
+                  </div>
+               </div>
+               <!-- <div class="v_divider"></div> -->
+               <div class="text">
+                  <span class="h_20px">Thinking about using drones for your next project?</span>
+               </div>
+               <div>
+                  <button class="round">Contact Us</button>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+
+   <div class="footer" id="contact">
+      <div class="footer_container">
+         <div class="logo">
+            <span class="logo_text">PIXAL</span>
+            <img src="assets/images/logo.png" />
+         </div>
+         <div class="email">
+            <a href="mailto:support@ArialWorks.com">support@arialworks.com</a>
+         </div>
+         <div class="phone">
+            <a href="tel:+911616974152">+91-161-6974152</a>
+         </div>
+         <div class="text">
+            <span>© 2023 Arial Works. All rights reserved. <a href="https://probdone.com"
+                  style="font-size: 0.5px;opacity: 0;"> Probdone</span>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- Bootstrap 5 CDN Scripts -->
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+   <!-- JavaScript/Jquery CDN Scripts -->
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/Form-handler.js"></script>
+
+</body>
+
+</html>

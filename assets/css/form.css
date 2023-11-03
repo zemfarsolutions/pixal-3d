@@ -1,0 +1,269 @@
+#form-overlay {
+  opacity: 0;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#form-overlay.visible {
+  opacity: 1;
+  z-index: 30;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#contact-form-container {
+  opacity: 0;
+  position: relative;
+  top: -100%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1;
+
+}
+
+#contact-form-container.visible {
+  opacity: 1;
+  -moz-transition: all 500ms linear;
+  -webkit-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  z-index: 110;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#industry-selection-label, #industry-selection-select {
+  display: none;
+}
+
+#industry-selection-label.visible, #industry-selection-select.visible {
+  display: block;
+}
+
+
+:root {
+  --primary-color: #010712;
+  --secondary-color: #818386;
+  --bg-color: #FCFDFD;
+  --button-color: #3B3636;
+  --h1-color: #3F444C;
+}
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 90%;
+  max-width: 1140px;
+  max-height: 800px;
+  height: 90vh;
+  min-height: 690px;
+  background: var(--bg-color);
+  border-radius: 16px;
+  pointer-events: all;
+}
+
+.left-col {
+  width: 60%;
+  height: 100%;
+  border-radius: 16px 0 0 16px;
+  background-image: url("../images/mountain-form.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+.drone {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/drone-placeholder.webp");
+  background-size: contain;
+  background-position: center bottom 20px;
+  background-repeat: no-repeat;
+}
+
+
+.right-col {
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+}
+
+
+label, .description {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+form {
+  width: 90%;
+  position: relative;
+  margin-top: 40px;
+
+}
+
+input, select, textarea, label {
+  width: 100%;
+  display: block;
+}
+
+
+
+input::placeholder, textarea::placeholder, select::placeholder {
+  color: var(--primary-color);
+}
+
+input, select, textarea {
+  color: var(--primary-color);
+  font-weight: 500;
+  background: var(--bg-color);
+  border: none;
+  border-bottom: 1px solid var(--secondary-color);
+  padding: 5px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid var(--secondary-color);
+}
+
+
+input:hover, textarea:hover, button:hover, select:hover {
+  opacity: 0.5;
+}
+
+
+/* Toggle Switch */
+
+
+
+
+
+
+#error, #success-msg {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+}
+
+#success-msg {
+  transition-delay: 3s;
+}
+
+@media only screen and (max-width: 950px) {
+
+  input, select, textarea, button {
+    font-size: 0.65rem;
+  }
+
+  .description {
+    font-size: 0.3rem;
+    margin-left: 0.4rem;
+  }
+
+
+}
+
+@media only screen and (max-width:1140px) {
+  .left-col {
+    width: 40%;
+  }
+
+  .right-col {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .contact-container {}
+}
+
+@media only screen and (max-height:767px) {
+  .contact-container {
+    height: 760px;
+  }
+
+  #contact-form-container.visible {
+    top: 400px;
+    margin-bottom: 40px;
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+  .left-col {
+    width: 100%;
+    height: 150px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .right-col {
+    width: 100%;
+  }
+
+  .contact-container {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  form {
+    width: 100%
+  }
+
+
+}
+
+@media only screen and (max-width:500px) {}
+
+.prevent-scroll {
+  overflow: hidden;
+}
+
+.scrollable {
+  position: fixed;
+  overflow-y: scroll;
+  inset: 0;
+  transition: opacity 1s;
+  width: 100%;
+  z-index: 110;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.scrollable.no-display {
+
+  transition: opacity 1s, z-index 0s 1s;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0;
+}

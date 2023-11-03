@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-lt-installed="true">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+
+    <!-- Viewport Meta -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
+    />
+    <meta
+      content="Probdone"
+      name="Abdul Haseeb Q. a.k.a twistyBRAT 鬼 ];) | a.haseeb199@gmail.com | https://probdone.com"
+    />
+
+    <!-- Fav Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+
+    <title>Construction & Engineering</title>
+
+    <!-- Assets -->
+    <style>
+      @import "https://fonts.googleapis.com/css?family=Inter:500,700,600|Rubik:500";
+    </style>
+
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="assets/css/construction.css" rel="stylesheet" />
+    <link href="assets/css/mouse.css" rel="stylesheet" />
+    <link href="assets/css/form.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="construction-header">
+      <div class="container mobile">
+        <div class="logo">
+          <span class="logo_text">PIXAL</span>
+          <img src="assets/images/logo.png" />
+        </div>
+        <div class="button_container" id="toggle">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <nav class="overlay-menu">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><span class="contact-us">Contact Us</span></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="container tablet">
+        <div class="logo">
+          <span class="logo_text">PIXAL</span>
+          <img src="assets/images/logo.png" />
+        </div>
+
+        <nav class="desktop-menu">
+          <ul>
+            <li class="menu-item">
+              <a href="#home" class="active">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="#solutions">Solutions</a>
+            </li>
+            <li class="menu-item">
+              <a href="#about">About Us</a>
+            </li>
+            <li class="menu-item">
+              <span class="contact-us">Contact Us</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="form-overlay"></div>
+
+    <!--Contact form start-->
+    <div class="scrollable no-display">
+      <div class="contact-container" id="contact-form-container">
+        <div class="left-col">
+          <div class="drone"></div>
+        </div>
+        <div class="right-col">
+          <h1>Book a flight</h1>
+          <p>
+            Planning to book a flight? Please fill the form below so we could
+            contact you at earliest convenience.
+          </p>
+
+          <!-- Make sure you don't change the form action-->
+          <form
+            id="contact-form"
+            action="https://api.staticforms.xyz/submit"
+            method="post"
+          >
+            <!-- Replace with accesKey sent to your email -->
+            <input
+              type="hidden"
+              name="accessKey"
+              value="e9644474-dd29-4b15-9735-7f5d747280d0"
+            />
+            <!-- Required -->
+            <input
+              type="hidden"
+              name="subject"
+              value="Test from Drone website"
+            />
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <label for="$location">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="$location"
+              placeholder="Your Address"
+              required
+            />
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email Address"
+              required
+            />
+            <label for="phone">Phone</label>
+            <input type="phone" name="phone" placeholder="Your phone" />
+
+            <label for="$industry">Select your Industry</label>
+            <select placeholder="-" name="$industry" id="industry" required>
+              <option disabled hidden selected>-</option>
+              <option>Construction/Engineering</option>
+              <option>Real Estate</option>
+              <option>Insurance</option>
+              <option>Energy</option>
+              <option>Telecommunications</option>
+            </select>
+            <label id="industry-selection-label" for="$industry-field"
+              >Select your business field</label
+            >
+            <select
+              placeholder="-"
+              name="$industry-field"
+              id="industry-selection-select"
+              required
+            ></select>
+            <label for="message">Message</label>
+            <textarea
+              rows="6"
+              placeholder="To best assist you with a quote. Please briefly describe your project and what you are looking to achieve. "
+              id="message"
+              name="message"
+              required
+            ></textarea>
+            <!-- If we receive data in this field submission will be ignored -->
+            <input type="text" name="honeypot" style="display: none" />
+            <!-- Optional -->
+            <!-- If you want form to redirect to a specific url after submission -->
+            <input
+              type="hidden"
+              name="redirectTo"
+              value="https://drone-8rh7.onrender.com/"
+            />
+            <!-- Optional -->
+            <!--<a href="javascript:void(0)">--><button
+              type="submit"
+              id="submit"
+              name="submit"
+              class="round"
+            >
+              Send</button
+            ><!--</a>-->
+          </form>
+
+          <div id="error"></div>
+          <div id="success-msg"></div>
+        </div>
+      </div>
+    </div>
+    <!--Contact form end-->
+
+    <!--BANNER SECTION START-->
+    <div class="hero" id="home">
+      <div class="dots1"></div>
+      <div class="container">
+        <h3>Insurance</h3>
+        <h1>Construction and Engineering</h1>
+        <h5>
+          We originally started our services catering to the construction
+          industry. With in house expertise in geomatics, we provide survey
+          grade topographical maps.
+        </h5>
+        <div class="construction-drone-placeholder"></div>
+      </div>
+    </div>
+    <!--BANNER SECTION END-->
+
+    <!--OUR CONSTRUCTION SOLUTION START-->
+
+    <div class="ourcunstruction-two-section">
+      <h2>Our Construction Solutions</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s,
+      </p>
+      <div class="icon-boxes">
+        <div class="icon-box box-1">
+          <img src="assets/images/icon-box.png" alt="" />
+          <h3>Topographi<br />cal Mapping</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+
+        <div class="icon-box box-2">
+          <img src="assets/images/icon-box.png" alt="" />
+          <h3>Topographical Mapping</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+
+        <div class="icon-box box-3">
+          <img src="assets/images/icon-box.png" alt="" />
+          <h3>Topographical Mapping</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+
+        <div class="icon-box box-4">
+          <img src="assets/images/icon-box.png" alt="" />
+          <h3>Topographical Mapping</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--OUR CONSTRUCTION SOLUTION END-->
+
+    <!--BANNER SECTION START-->
+    <div class="hero-2" id="home-banner-2">
+      <div class="hero-banner-2"></div>
+      <div class="container">
+        <h3>Digital Terrain modelling</h3>
+        <h1>Construction</h1>
+        <div class="red-circle-para">
+          <img src="assets/images/red-circle.png" alt="" />
+          <p class="red-circle">
+            Digital Terrain Models: As part of the volume reports you will
+            receive an orthomosiac map, as well as a digital terrain model. All
+            of this data lives on your online dashboard where you can easily
+            review and pan your model in 3D space.
+          </p>
+        </div>
+        <div class="red-circle-para">
+          <img src="assets/images/red-circle.png" alt="" />
+          <p class="red-circle">
+            Digital Terrain Models: As part of the volume reports you will
+            receive an orthomosiac map, as well as a digital terrain model. All
+            of this data lives on your online dashboard where you can easily
+            review and pan your model in 3D space.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--BANNER SECTION END-->
+
+    <!--BANNER SECTION START-->
+    <div class="main-two">
+      <h2>Construction and Engineering</h2>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <div class="hero-2" id="home-banner-2">
+        <div class="hero-banner-2"></div>
+        <div class="container">
+          <div class="engineir-box">
+            <div class="image-and-heading">
+              <img src="assets/images/engineer.png" alt="">
+              <h4>Increase Efficiency </h4>
+            </div>
+          </div>
+          <div class="arrow-1">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--BANNER SECTION END-->
+  </body>
+</html>
